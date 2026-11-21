@@ -232,7 +232,7 @@ def draw_map(d, x, y, w, h):
     d.text((x + w - 44, y + h - 14), "ATLANTIC", font=F_C, fill=FAINT)
     pins = {1: (170, 34), 2: (196, 52), 3: (72, 96), 4: (188, 36), 5: (284, 56),
             6: (240, 38), 7: (158, 28), 8: (250, 48), 9: (262, 100), 10: (162, 96),
-            11: (250, 40), 12: (216, 46), 13: (252, 104)}
+            11: (266, 62), 12: (216, 46), 13: (252, 104)}
     for n, (px, py) in pins.items():
         cx, cy = x + px * sc, y + py * sc
         dot(d, cx, cy, 8, RED)
@@ -389,9 +389,9 @@ def build(out_path):
            font=F_10, fill=MID)
     draw_map(d, 16, y, 270, 135)
     d.rounded_rectangle([16, y + 145, 16 + 270, y + 165], radius=3, fill=(245, 245, 245))
-    d.text((22, y + 150), "DATE CHECK: all 43 stories dated 21 Nov 2026.",
+    d.text((22, y + 150), "DATE CHECK: all 43 stories, 21 Nov 2026.",
            font=F_BXS, fill=MID)
-    d.text((22, y + 166), "Friday news excluded. See sources under each card.",
+    d.text((22, y + 166), "Friday news excluded. Sources on cards.",
            font=F_BXS, fill=MID)
     d.text((22, y + 182), "13 cards above + 30 below = 43 stories.",
            font=F_BXS, fill=MID)
